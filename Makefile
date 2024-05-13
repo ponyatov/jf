@@ -6,7 +6,10 @@ LAB  = $(JUPY)-lab
 DOT  = /usr/bin/dotnet
 
 # all
-all: $(LAB)
+.PHONY: all lab
+all:
+lab: $(LAB)
+	$^
 
 # https://github.com/dotnet/interactive/blob/main/docs/NotebookswithJupyter.md
 # install
